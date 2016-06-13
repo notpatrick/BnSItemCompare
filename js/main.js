@@ -1,5 +1,3 @@
-console.log("loaded");
-
 function AccuracyToPercent(rating) {
     return (94.9 * rating) / (4707 + rating);
     //return (94.9927 * rating) / (7027.7634 + rating);
@@ -80,7 +78,6 @@ function updateInput(element, type, name, n, row){
         base = parseFloat(document.getElementById(type+"Base").value);
     } else if (name == "Base") {
         Cookies.set(typeMap[row], value, {expires: 365, path: ''});
-        console.log(Cookies.get());
     }    
     
     document.getElementById(target).value = base + parseFloat(value);
@@ -108,19 +105,20 @@ function updateCSS() {
     var hit2 = document.getElementById("Hit2");
     var crit2 = document.getElementById("Crit2");
     var avg2 = document.getElementById("Avg2");
-    
+    var elem = document.getElementById("advice");
+        
     if(avg1.value > avg2.value) {
         avg1.style.borderColor = 'green';
         avg2.style.borderColor = 'red';
-        document.getElementById("advice").innerText = "Item 1 is better by ~ " + Math.round((avg1.value / avg2.value *100 - 100) *100) /100 + "%";
+        elem.innerText = "Item 1 is better by ~ " + Math.round((avg1.value / avg2.value *100 - 100) *100) /100 + "%";
     } else if (avg2.value > avg1.value) {
         avg2.style.borderColor = 'green';
         avg1.style.borderColor = 'red';
-        document.getElementById("advice").innerText = "Item 2 is better by ~ " + Math.round((avg2.value / avg1.value *100 - 100) *100) /100 + "%";
+        elem.innerText = "Item 2 is better by ~ " + Math.round((avg2.value / avg1.value *100 - 100) *100) /100 + "%";
     } else {
         avg1.style.borderColor = 'yellow';
         avg2.style.borderColor = 'yellow';
-        document.getElementById("advice").innerText = "Items are equal";
+        elem.innerText = "Items are equal";
     }
 }
 
@@ -131,7 +129,7 @@ window.onload = function() {
     var total1 = document.getElementById("total1").getElementsByTagName("input");
     var total2 = document.getElementById("total2").getElementsByTagName("input");
     var ckys = Cookies.get();
-    console.log(ckys);
+    
     for (var i = 0; i < total1.length; i += 1) {
         if(ckys[typeMap[i]]) {
             base[i].value = ckys[typeMap[i]];
