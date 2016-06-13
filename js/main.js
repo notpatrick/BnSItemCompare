@@ -70,6 +70,7 @@ function Average(n) {
 }
 
 function updateInput(element, type, name, n, row){    
+    element.value = parseInt(element.value);
     var value = element.value
     var base = 0;
     var target = type + name + n;
@@ -120,6 +121,18 @@ function updateCSS() {
         avg2.style.borderColor = 'yellow';
         elem.innerText = "Items are equal";
     }
+}
+
+function resetItems() {    
+    var item1 = document.getElementById("item1").getElementsByTagName("input");
+    var item2 = document.getElementById("item2").getElementsByTagName("input");
+    for (var i = 0; i < item1.length; i += 1) {
+        item1[i].value = 0;
+        item2[i].value = 0;
+        updateInput({value: 0}, typeMap[i], "Total", 1, i);
+        updateInput({value: 0}, typeMap[i], "Total", 2, i);
+    }
+
 }
 
 window.onload = function() {

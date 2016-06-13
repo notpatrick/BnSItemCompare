@@ -47,15 +47,15 @@
             <div class="two columns" id="base">
               <label>Base Stats</label>
               <label for="exampleEmailInput">AP</label>
-              <input class="u-full-width" type="number" min="0" value="600" id="AttackPowerBase" onchange="updateInput(this, 'AttackPower', 'Base', 2, 0)">
+              <input class="u-full-width" type="number" min="0" value="600" id="AttackPowerBase" onchange="updateInput(this, 'AttackPower', 'Base', 2, 0)" onkeyup="updateInput(this, 'AttackPower', 'Base', 2, 0)">
               <label for="exampleEmailInput" class="hidden">ACC</label>
-              <input class="u-full-width hidden" type="number" min="0" value="500" id="AccuracyBase" onchange="updateInput(this, 'Accuracy', 'Base', 2, 1)">
+              <input class="u-full-width hidden" type="number" min="0" value="500" id="AccuracyBase" onchange="updateInput(this, 'Accuracy', 'Base', 2, 1)" onkeyup="updateInput(this, 'Accuracy', 'Base', 2, 1)">
               <label for="exampleEmailInput">PEN</label>
-              <input class="u-full-width" type="number" min="0" value="500" id="PenetrationBase" onchange="updateInput(this, 'Penetration', 'Base', 2, 2)">
+              <input class="u-full-width" type="number" min="0" value="500" id="PenetrationBase" onchange="updateInput(this, 'Penetration', 'Base', 2, 2)" onkeyup="updateInput(this, 'Penetration', 'Base', 2, 2)">
               <label for="exampleEmailInput">CRIT</label>
-              <input class="u-full-width" type="number" min="0" value="4000" id="CriticalBase" onchange="updateInput(this, 'Critical', 'Base', 2, 3)">
+              <input class="u-full-width" type="number" min="0" value="4000" id="CriticalBase" onchange="updateInput(this, 'Critical', 'Base', 2, 3)" onkeyup="updateInput(this, 'Critical', 'Base', 2, 3)">
               <label for="exampleEmailInput">CDMG</label>
-              <input class="u-full-width" type="number" min="0" value="1600" id="CriticalDamageBase" onchange="updateInput(this, 'CriticalDamage', 'Base', 2, 4)">
+              <input class="u-full-width" type="number" min="0" value="1600" id="CriticalDamageBase" onchange="updateInput(this, 'CriticalDamage', 'Base', 2, 4)" onkeyup="updateInput(this, 'CriticalDamage', 'Base', 2, 4)">
             </div>
             <div class="two columns" id="item1">
               <label>Item 1</label>
@@ -73,15 +73,15 @@
             <div class="two columns" id="total1" style="display: none;">
               <label>Total 1</label>
               <label for="exampleEmailInput">AP</label>
-              <input class="u-full-width" type="number" min="0" value="0" id="AttackPowerTotal1" disabled onchange="updateResult(this, 'AttackPower', 'Percent', 1, 0)">
+              <input class="u-full-width" type="number" min="0" value="0" id="AttackPowerTotal1" disabled onchange="updateResult(this, 'AttackPower', 'Percent', 1, 0)" onkeyup="updateResult(this, 'AttackPower', 'Percent', 1, 0)">
               <label for="exampleEmailInput" class="hidden">ACC</label>
-              <input class="u-full-width hidden" type="number" min="0" value="0" id="AccuracyTotal1" disabled onchange="updateResult(this, 'Accuracy', 'Percent', 1, 1)">
+              <input class="u-full-width hidden" type="number" min="0" value="0" id="AccuracyTotal1" disabled onchange="updateResult(this, 'Accuracy', 'Percent', 1, 1)" onkeyup="updateResult(this, 'Accuracy', 'Percent', 1, 1)">
               <label for="exampleEmailInput">PEN</label>
-              <input class="u-full-width" type="number" min="0" value="0" id="PenetrationTotal1" disabled onchange="updateResult(this, 'Penetration', 'Percent', 1, 2)">
+              <input class="u-full-width" type="number" min="0" value="0" id="PenetrationTotal1" disabled onchange="updateResult(this, 'Penetration', 'Percent', 1, 2)" onkeyup="updateResult(this, 'Penetration', 'Percent', 1, 2)">
               <label for="exampleEmailInput">CRIT</label>
-              <input class="u-full-width" type="number" min="0" value="0" id="CriticalTotal1" disabled onchange="updateResult(this, 'Critical', 'Percent', 1, 3)">
+              <input class="u-full-width" type="number" min="0" value="0" id="CriticalTotal1" disabled onchange="updateResult(this, 'Critical', 'Percent', 1, 3)" onkeyup="updateResult(this, 'Penetration', 'Percent', 1, 2)">
               <label for="exampleEmailInput">CDMG</label>
-              <input class="u-full-width" type="number" min="0" value="0" id="CriticalDamageTotal1" disabled onchange="updateResult(this, 'CriticalDamage', 'Percent', 1, 4)">
+              <input class="u-full-width" type="number" min="0" value="0" id="CriticalDamageTotal1" disabled onchange="updateResult(this, 'CriticalDamage', 'Percent', 1, 4)" onkeyup="updateResult(this, 'Penetration', 'Percent', 1, 2)">
             </div>
             <div class="two columns" id="percent1">
               <label>Result Stats 1</label>
@@ -125,15 +125,15 @@
             <div class="two columns" id="item2">
               <label>Item 2</label>
               <label for="exampleEmailInput">AP</label>
-              <input class="u-full-width" type="number" min="0" value="0" id="AttackPowerItem2" onchange="updateInput(this, 'AttackPower', 'Total', 2, 0)">
+              <input class="u-full-width" type="number" min="0" value="0" id="AttackPowerItem2" onchange="updateInput(this, 'AttackPower', 'Total', 2, 0)" onkeyup="updateInput(this, 'AttackPower', 'Total', 2, 0)">
               <label for="exampleEmailInput" class="hidden">ACC</label>
-              <input class="u-full-width hidden" type="number" min="0" value="0" id="AccuracyItem2" onchange="updateInput(this, 'Accuracy', 'Total', 2, 1)">
+              <input class="u-full-width hidden" type="number" min="0" value="0" id="AccuracyItem2" onchange="updateInput(this, 'Accuracy', 'Total', 2, 1)" onkeyup="updateInput(this, 'Accuracy', 'Total', 2, 1)">
               <label for="exampleEmailInput">PEN</label>
-              <input class="u-full-width" type="number" min="0" value="0" id="PenetrationItem2" onchange="updateInput(this, 'Penetration', 'Total', 2, 2)">
+              <input class="u-full-width" type="number" min="0" value="0" id="PenetrationItem2" onchange="updateInput(this, 'Penetration', 'Total', 2, 2)" onkeyup="updateInput(this, 'Penetration', 'Total', 2, 2)">
               <label for="exampleEmailInput">CRIT</label>
-              <input class="u-full-width" type="number" min="0" value="0" id="CriticalItem2" onchange="updateInput(this, 'Critical', 'Total', 2, 3)">
+              <input class="u-full-width" type="number" min="0" value="0" id="CriticalItem2" onchange="updateInput(this, 'Critical', 'Total', 2, 3)" onkeyup="updateInput(this, 'Critical', 'Total', 2, 3)">
               <label for="exampleEmailInput">CDMG</label>
-              <input class="u-full-width" type="number" min="0" value="0" id="CriticalDamageItem2" onchange="updateInput(this, 'CriticalDamage', 'Total', 2, 4)">
+              <input class="u-full-width" type="number" min="0" value="0" id="CriticalDamageItem2" onchange="updateInput(this, 'CriticalDamage', 'Total', 2, 4)" onkeyup="updateInput(this, 'CriticalDamage', 'Total', 2, 4)">
             </div>
             <div class="two columns" id="total2" style="display: none;">
               <label>Total 2</label>
@@ -169,6 +169,8 @@
               <input class="u-full-width" type="text" value="0" id="Crit2" disabled>
               <label for="exampleEmailInput">Avg</label>
               <input class="u-full-width" type="text" value="0" id="Avg2" disabled>
+              <label>Reset items</label>
+              <button class="u-full-width" onclick="resetItems();">Reset</button>
             </div>
           </div>
             
@@ -178,6 +180,7 @@
 
         <!-- Note: The class .u-full-width is just a utility class shorthand for width: 100% -->
       </div>
+      
       <div class="twelve columns" id="advice"></div>
     </div>
   </div>
